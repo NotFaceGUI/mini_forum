@@ -1,0 +1,22 @@
+[
+    {
+        "path": "/",
+        "name": "index",
+        "componentPath": "../components/Main.vue"
+    },
+    {
+        "path": "/like",
+        "name": "like",
+        "componentPath": "../views/Like.vue"
+    },
+    {
+        "path": "/notification",
+        "name": "notification",
+        "componentPath": "../views/Notification.vue"
+    },
+    {
+        "path": "/setting",
+        "name": "setting",
+        "componentPath": "../views/Setting.vue"
+    }
+]

@@ -1,0 +1,50 @@
+:root {
+    --bg_color: #0F172A;
+    --fg_color: #E6EFFF;
+    --fg_check_color: #80D47C;
+    --fg_hover: #3b4157d8;
+    --fg_check: #3B4157;
+    --search_border: #5D637B;
+    --bg_box: #3B4157;
+    --bg_box_60: #3b41579d;
+    --fg_text_color_light: #3b4157d8;
+
+    /* 按钮 */
+    --bg_button_1: #80D47C;
+    --bg_button_action_1: #97e292;
+    --bg_button_2: #60ECBD;
+    --bg_button_action_2: #79f8ce;
+
+    --select_check_color: #80d47cda;
+}
+
+.select_box {
+    background-color: var(--bg_color);
+    border: 1px solid var(--search_border);
+}
+
+.el-input__wrapper {
+    background-color: var(--bg_box) !important;
+    border: thin solid var(--select_check_color);
+}
+
+.el-select-dropdown__item {
+    color: var(--fg_color) !important;
+}
+
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+    background-color: var(--fg_hover) !important;
+}
+
+.el-select-dropdown__item.selected {
+    color: var(--fg_check_color) !important;
+}
+
+.el-input__inner {
+    color: var(--fg_color) !important;
+}
+
+.select_box>.el-select .el-input.is-focus .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--search_border) inset !important;
+}
