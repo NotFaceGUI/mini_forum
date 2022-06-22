@@ -19,11 +19,10 @@
 
 
 <script lang="ts">
-import { defineComponent, onMounted, reactive, ref, toRefs } from 'vue';
+import { defineComponent, onMounted, reactive, ref, toRefs, onUnmounted } from 'vue';
 import navData from "../config/navData.json"
 import { useRoute, useRouter } from 'vue-router';
 import Post from './Post.vue';
-
 
 export default defineComponent({
     name: "Header",

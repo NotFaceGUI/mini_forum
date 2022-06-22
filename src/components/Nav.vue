@@ -9,7 +9,6 @@ import Tag from './Tag.vue';
                 <input type="text" name="search" placeholder="搜索" class="text">
                 <button type="submit" class="search_button">搜索</button>
             </div>
-            <Tag />
         </div>
     </nav>
 </template>

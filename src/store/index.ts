@@ -10,6 +10,10 @@ const useStore = defineStore('main', {
             role: ""
         },
         curInfo: {
+        },
+        page: {
+            size: 1,
+            current: 0
         }
     }),
     getters: {
@@ -24,6 +28,9 @@ const useStore = defineStore('main', {
         },
         getCurInfo(state): any {
             return state.curInfo;
+        },
+        getPage(state) {
+            return state.page;
         }
     },
     actions: {
@@ -38,6 +45,9 @@ const useStore = defineStore('main', {
         },
         setCurInfo(data: any) {
             this.curInfo = data;
+        },
+        setPage(cur: number) {
+            this.page.current = cur;
         }
     }
 })

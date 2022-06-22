@@ -52,6 +52,7 @@ export default defineComponent({
 
         const jump = (index: number) => {
             data.curIndex = index;
+            localStorage.setItem("tag", data.curIndex.toString())
         }
 
         return {

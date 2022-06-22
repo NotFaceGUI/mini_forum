@@ -21,8 +21,14 @@ export default defineComponent({
         MenuBar
     },
 
-    setup() {
-        const editor: any = useEditor({
+    setup(props, context) {
+        const currentData = () => {
+            context.emit("changeData", {
+                data: editor.value?.getJSON(),
+            })
+        }
+
+        const editor = useEditor({
             content: '',
             extensions: [
                 StarterKit,
@@ -33,6 +39,9 @@ export default defineComponent({
                 }),
                 Image
             ],
+            onUpdate({ editor }) {
+                currentData();
+            },
         })
 
         return { editor }

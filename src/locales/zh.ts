@@ -5,7 +5,7 @@ export default {
         notification: '通知',
         setting: '设置'
     },
-    category: ["热门", "最新", "关注"],
+    category: ["最新", "热门", "关注"],
     button: {
         login: "登录",
         reg: "注册"

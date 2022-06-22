@@ -172,4 +172,29 @@ button {
   color: var(--fg_color) !important;
 }
 
+.cancel_button,
+.confirm {
+  height: 40px;
+  width: 80px;
+  transition: all .3s;
+}
+
+.confirm {
+  margin-left: 10px;
+}
+
+/* .el-notification {
+  background-color: var(--bg_box) !important;
+  border: 1px solid var(--search_border) !important;
+}
+
+.el-notification__content,
+.el-notification__title {
+  color: var(--fg_color) !important;
+} */
+
+.cancel_button:active,
+.confirm:active {
+  transform: scale(.8);
+}
 </style>

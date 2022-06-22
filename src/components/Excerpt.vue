@@ -20,13 +20,13 @@
                 </el-icon>
                 <span class="text">0</span>
             </div>
-            <div class="item star_icon">
+            <div class="item star_icon" @click.stop="">
                 <el-icon :size="28" style="vertical-align: middle;">
                     <Star />
                 </el-icon>
                 <span class="text">0</span>
             </div>
-            <div class="item share_icon">
+            <div class="item share_icon" @click.stop="">
                 <el-icon :size="28" style="vertical-align: middle;">
                     <Share />
                 </el-icon>

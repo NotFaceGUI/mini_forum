@@ -5,7 +5,7 @@ export default {
         notification: 'notification',
         setting: 'setting'
     },
-    category: ["Hot", "Newest", "Follow"],
+    category: ["Newest", "Hot", "Follow"],
     button: {
         login: "Sign in",
         reg: "Register"

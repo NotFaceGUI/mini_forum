@@ -4,10 +4,10 @@
   </div>
   <div v-if="show">
     <div class="icon" v-if="visable">
-      <el-icon v-if="!isActive" @click="isActive = true">
+      <el-icon v-if="!isActive" @click.stop="isActive = true">
         <ArrowDownBold />
       </el-icon>
-      <el-icon v-if="isActive" @click="isActive = false">
+      <el-icon v-if="isActive" @click.stop="isActive = false">
         <ArrowUpBold />
       </el-icon>
     </div>
