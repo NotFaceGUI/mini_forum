@@ -18,7 +18,7 @@
                 <el-icon :size="28" style="vertical-align: middle;">
                     <ChatSquare />
                 </el-icon>
-                <span class="text">0</span>
+                <span class="text">{{ JSON.parse(item.comment).length }}</span>
             </div>
             <div class="item star_icon" @click.stop="">
                 <el-icon :size="28" style="vertical-align: middle;">
@@ -42,6 +42,7 @@ import Tiptap from './Tiptap.vue';
 
 const tip: any = ref(null)
 let visable = ref(false)
+
 
 const props = defineProps<{
     item: any

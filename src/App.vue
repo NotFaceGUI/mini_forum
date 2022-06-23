@@ -193,6 +193,11 @@ button {
   color: var(--fg_color) !important;
 } */
 
+.el-skeleton {
+  --el-skeleton-color: #4d5054 !important;
+  --el-skeleton-to-color: #8b959f38 !important;
+}
+
 .cancel_button:active,
 .confirm:active {
   transform: scale(.8);

@@ -57,14 +57,12 @@
                     <span class="name">{{ item.name }}</span>
                     <div class="content">
                         {{ item.comment }}
-
                     </div>
                 </div>
                 <div class="time">
                     <span>{{ item.createTime }}</span>
                 </div>
             </div>
-
         </div>
         <div class="user_comment" v-if="comments.length == 0">
             <span>暂时没有评论~</span>
@@ -86,7 +84,6 @@ let comments: any = reactive([]);
 let content = ref("")
 
 const comment = () => {
-
     if (!store.getIsLogin) {
         alert("请登录")
     } else {
@@ -122,21 +119,21 @@ onMounted(() => {
         axios.post("article/views", cur.id).then(() => {
             console.log("object");
         });
-        axios.get("article/all", {
-            params: {
-                "id": cur.id,
-            }
-        }).then((res) => {
-            if (res.data.code != 500) {
-                console.log("comment", res.data.data);
-                content.value = "";
-                res.data.data.forEach((element: any) => {
-                    comments.push(element);
-                });
-            }
-        })
-    }
 
+    }
+    axios.get("article/all", {
+        params: {
+            "id": cur.id,
+        }
+    }).then((res) => {
+        if (res.data.code != 500) {
+            console.log("comment", res.data.data);
+            content.value = "";
+            res.data.data.forEach((element: any) => {
+                comments.push(element);
+            });
+        }
+    })
 })
 
 
@@ -256,14 +253,11 @@ p {
     border-radius: 5px;
 }
 
-
-
 .text {
     font-size: 14px;
     margin-left: 5px;
     vertical-align: middle;
 }
-
 
 .excerpt {
     text-align: left;
@@ -308,7 +302,6 @@ p {
     height: 40px;
     margin-top: 5px;
 }
-
 
 .user {
     position: relative;

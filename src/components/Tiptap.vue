@@ -18,6 +18,9 @@
 import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import { onMounted, ref, nextTick, getCurrentInstance, defineComponent, onUpdated } from 'vue';
+import Highlight from '@tiptap/extension-highlight'
+import Link from '@tiptap/extension-link'
+import Image from '@tiptap/extension-image'
 
 export default defineComponent({
   components: {
@@ -30,10 +33,16 @@ export default defineComponent({
       content: JSON.parse(props.data),
       extensions: [
         StarterKit,
+        Highlight.configure({ multicolor: true }),
+        Link.configure({
+          openOnClick: true,
+          linkOnPaste: true,
+        }),
+        Image
       ],
     })
     const isActive = ref(false);
-    
+
 
     onMounted(() => {
     })
